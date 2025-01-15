@@ -1,0 +1,23 @@
+.primary-background{
+    background-color: #0B032D;
+}
+
+.text-cream{
+    color: #EAF8BF
+}
+
+.text-grey{
+    color: #aaa;
+}
+
+.text-orange{
+    color: #FF7700
+}
+
+
+.oswald {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+}
