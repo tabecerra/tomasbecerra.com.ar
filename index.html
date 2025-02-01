@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Becerra Tomás</title>
-    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">	
 </head>
 <body class="primary-background">
 	<header>
-		<div class="justify-content-center mt-1">
+		<div class="navbar">
+			<img src="../tomasbecerra.com.ar/src/yo.jpeg" alt="Becerra Tomás" class="width-3 circle-img">
 			<nav class="border-pill rich-blanck-background">
-				<ul class="justify-content-center mtb-1">
-					<li class="mse-1 active">
-						<a class="text-cream" href="#">Home</a>
-					</li>
-					<li class="me-1">
-						<a class="text-cream" href="#">About</a>
-					</li>
-					<li class="me-1">
-						<a class="text-cream" href="#">Projects</a>
-					</li>
-					<li class="me-1">
-						<a class="text-cream" href="#">Changelog</a>
-					</li>
+				<ul class="nav-items">
+					<li><a href="#" class="text-cream">Home</a></li>
+					<li><a href="#" class="text-cream">About</a></li>
+					<li><a href="#" class="text-cream">Projects</a></li>
+					<li><a href="#" class="text-cream">Changelog</a></li>
 				</ul>
 			</nav>
+			<a href="#"><button class="text-rich-blanck contact-button">Contact</button></a>
+			<div class="toggle-btn">
+				<i class="fa-solid fa-bars text-cream"></i>
+			</div>
+			<div class="dropbox-menu">
+				<li><a href="#" class="text-cream">Home</a></li>
+				<li><a href="#" class="text-cream">About</a></li>
+				<li><a href="#" class="text-cream">Projects</a></li>
+				<li><a href="#" class="text-cream">Changelog</a></li>
+				<li><a class="text-rich-blanck contact-button" href="#">Contact</a></li>
+			</div>
 		</div>
 	</header>
+	<div class="presentation-content">
+		<h1 class="text-cream">Hola ¿cómo estás? Soy,<br><span class="text-orange">Becerra Tomás!</span> 👋</h1>
+		<p class="text-grey mt-1 lh-lg fs-5 text">Desarrollador Full Stack Developer, nacido en Buenos Aires, Argentina 🇦🇷.<br>Bienvenido a mi web! Donde comparto información sobre mis proyectos y experiencias.</p>
+	</div>
 	<script src="./js/script.js"></script>
 </body>
 </html>
