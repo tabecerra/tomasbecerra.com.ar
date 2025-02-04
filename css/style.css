@@ -22,7 +22,7 @@ button, li, a {
 }
 
 .rich-blanck-background {
-    background-color: #050113;
+    background-color: #171717;
 }
 
 .text-rich-blanck {
@@ -42,7 +42,10 @@ button, li, a {
 }
 
 .text-orange{
-    color: #FF7700
+    background: linear-gradient(90deg,#FF7700, #f83439);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 .border-pill{
