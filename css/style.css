@@ -218,8 +218,13 @@ ul li.active a {
         width: 9%;
     }
 
-    .presentation-content {
-        font-size: 14px;
+    .presentation-content h1 {
+        font-size: 2rem;
+    }
+    
+    .presentation-content p {
+        font-size: .9rem;
+        line-height: 1.8rem;
     }
 }
 
