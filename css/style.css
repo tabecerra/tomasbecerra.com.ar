@@ -9,7 +9,7 @@
 button, li, a {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     text-decoration: none;
 }
 
@@ -93,7 +93,7 @@ button, li, a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 2rem;
+    padding: 2rem 10%;
 }
 
 .width-3 {
@@ -127,6 +127,8 @@ button, li, a {
 
 ul {
     padding: 10px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 li {
@@ -176,8 +178,25 @@ ul li.active a {
 }
 
 .presentation-content {
-    padding: 5rem 10%;
-    font-size: 24px;
+    padding: 6rem 10%;
+}
+
+.presentation-content h1 {
+    font-size: 3rem;
+}
+
+.presentation-content p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.socials-buttons {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.more-data a{
+    padding: 0 .5rem;
 }
 
 
