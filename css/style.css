@@ -195,6 +195,10 @@ ul li.active a {
     cursor: pointer;
 }
 
+.socials-buttons:hover {
+    color:#FF7700
+}
+
 .more-data a{
     padding-right:.8rem;
 
