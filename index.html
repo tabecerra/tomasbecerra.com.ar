@@ -4,71 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomás Becerra</title>
-	<link rel="icon" href="/src/logo.png" type="image/x-icon">
+	<link rel="icon" href="./src/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 	<link rel="icon" href="data:,">
 </head>
 <body class="primary-background">
 	<header>
 		<div class="navbar">
-			<img src="/src/yo.jpeg" alt="Becerra Tomás" class="width-3 circle-img">
-			<nav class="border-pill rich-blanck-background">
-				<ul class="nav-items">
-					<li><a href="#" class="text-cream">Home</a></li>
-					<li><a href="#" class="text-cream">About</a></li>
-					<li><a href="#" class="text-cream">Projects</a></li>
-					<li><a href="#" class="text-cream">Changelog</a></li>
-				</ul>
-			</nav>
-			<a 
+				<img src="./src/yo.jpeg" alt="Becerra Tomás" class="circle-img">
+				<nav id="navbar-web" class="border-pill rich-blanck-background">
+					<ul class="nav-items">
+						<li><a href="#home" class="text-cream">Home</a></li>
+						<li><a href="#about" class="text-cream">About</a></li>
+						<li><a href="#projects" class="text-cream">Projects</a></li>
+						<li><a href="#changelog" class="text-cream">Changelog</a></li>
+					</ul>
+				</nav>
+				<a 
 				class="text-rich-blanck contact-button" 
 				href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
 				target="_blank"
-			>
-			Contact
+				>
+				Contact
 			</a>
-			<div class="toggle-btn">
-				<i class="fa-solid fa-bars text-cream"></i>
+				<div class="toggle-btn">
+					<i class="fa-solid fa-bars text-cream"></i>
+				</div>
+				<div class="dropbox-menu">
+					<li><a href="#home" class="text-cream">Home</a></li>
+					<li><a href="#about" class="text-cream">About</a></li>
+					<li><a href="#projects" class="text-cream">Projects</a></li>
+					<li><a href="#contact" class="text-cream">Changelog</a></li>
+					<li>
+						<a 
+							class="text-rich-blanck contact-button" 
+							href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
+							target="_blank"
+						>
+						Contact
+						</a>
+					</li>
+				</div>
 			</div>
-			<div class="dropbox-menu">
-				<li><a href="#" class="text-cream">Home</a></li>
-				<li><a href="#" class="text-cream">About</a></li>
-				<li><a href="#" class="text-cream">Projects</a></li>
-				<li><a href="#" class="text-cream">Changelog</a></li>
-				<li>
-					<a 
-						class="text-rich-blanck contact-button" 
-						href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
-						target="_blank"
-					>
-					Contact
-					</a>
-				</li>
-			</div>
-		</div>
 	</header>
-	<div class="presentation-content">
-		<h1 class="text-cream">Hey there, I’m<br><span class="text-orange">Tomás Becerra!</span> 👋</h1>
-		<p class="text-grey mt-1 lh-lg fs-5 text">Full Stack Developer born in Buenos Aires, Argentina 🇦🇷.<br>
-			Welcome to my website where I share information about my projects and experiences.</p>
-		<div class="more-data">
-			<a 
-				class="text-cream" 
-				href="https://github.com/tabecerra"
-				target="_blank"
-			>
-			<i class="fa-brands fa-github socials-buttons mt-1"></i>
-			</a>
-			<a 
-				class="text-cream" 
-				href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
-				target="_blank"
-			>
-			<i class="fa-brands fa-linkedin socials-buttons mt-1"></i>
-			</a>
+	<section id="home" class="section">
+		<div class="presentation-content">
+			<h1 class="text-cream">Hey there, I’m<br><span class="text-orange">Tomás Becerra!</span> 👋</h1>
+			<div>
+				<p class="text-grey mt-1 lh-lg fs-5 text">Full Stack Developer born in Buenos Aires, Argentina 🇦🇷.<br>
+					Welcome to my website where I share information about my projects and experiences.</p>
+			</div>
+			<div class="more-data">
+				<a 
+					class="text-cream" 
+					href="https://github.com/tabecerra"
+					target="_blank"
+				>
+				<i class="fa-brands fa-github socials-buttons mt-1"></i>
+				</a>
+				<a 
+					class="text-cream" 
+					href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
+					target="_blank"
+				>
+				<i class="fa-brands fa-linkedin socials-buttons mt-1"></i>
+				</a>
+			</div>
 		</div>
-	</div>
-	<script src="/js/script.js"></script>
+	</section>
+
+	<section id="about" class="section">
+		<div class="presentation-content">
+			<h1 class="text-cream">About</h1>
+			<div class="about-me">
+				<p class="text-grey mt-1 lh-lg fs-5 text">Hi there! I’m <strong class="text-orange">Tomás Becerra</strong>, a 20-year-old tech enthusiast with a curious mind and a constant drive to learn.<br> I graduated as a <i class="fa-solid fa-desktop"></i> <strong class="text-orange">Computer Technician</strong> from <span class="logo-huergo"></span> <strong class="text-orange">Instituto Industrial Luis A. Huergo</strong>, where I discovered my passion for solving problems through code.<br> Currently, I work at  <span class="logo-calim"></span> <strong class="text-orange">Calim Estudio Contable Digital</strong class="text-orange">, blending my technical skills with the practical world of digital accounting.</p> <p class="text-grey mt-1 lh-lg fs-5 text">I’m a sociable person who loves connecting with others, but I also cherish my focus time: coding, playing chess (always up for a game!), and practicing handball as a hobby are my creative outlets.<br>Right now, I’m laser-focused on mastering emerging technologies while working toward my ultimate goal: becoming a <i class="fa-solid fa-gear"></i> <strong class="text-orange">Systems Engineer</strong> who bridges innovation with real-world solution who bridges innovation with real-world solutions.</p>
+			</div>
+		</div>
+	</section>
+	<section id="projects" class="section">
+		<div class="presentation-content">
+			<h1 class="text-cream">Projects</h1>
+			<p class="text-grey mt-1 lh-lg fs-5 text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est ex laborum debitis rem nostrum voluptatibus quis, id eveniet similique pariatur atque suscipit labore quasi accusamus praesentium. Vel, blanditiis fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at nemo, repellendus ad et exercitationem aliquid quis debitis ut repellat ipsam nesciunt unde odio error commodi, est nobis maxime saepe.</p>
+			<div class="more-data">
+				<a 
+					class="text-cream" 
+					href="https://github.com/tabecerra"
+					target="_blank"
+				>
+				<i class="fa-brands fa-github socials-buttons mt-1"></i>
+				</a>
+				<a 
+					class="text-cream" 
+					href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
+					target="_blank"
+				>
+				<i class="fa-brands fa-linkedin socials-buttons mt-1"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section id="changelog" class="section">
+		<div class="presentation-content">
+			<h1 class="text-cream">Changelog</h1>
+			<p class="text-grey mt-1 lh-lg fs-5 text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est ex laborum debitis rem nostrum voluptatibus quis, id eveniet similique pariatur atque suscipit labore quasi accusamus praesentium. Vel, blanditiis fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at nemo, repellendus ad et exercitationem aliquid quis debitis ut repellat ipsam nesciunt unde odio error commodi, est nobis maxime saepe.</p>
+			<div class="more-data">
+				<a 
+					class="text-cream" 
+					href="https://github.com/tabecerra"
+					target="_blank"
+				>
+				<i class="fa-brands fa-github socials-buttons mt-1"></i>
+				</a>
+				<a 
+					class="text-cream" 
+					href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/"
+					target="_blank"
+				>
+				<i class="fa-brands fa-linkedin socials-buttons mt-1"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<script src="./js/script.js"></script>
 </body>
 </html>
