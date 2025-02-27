@@ -74,7 +74,7 @@ button, li, a {
 }
 
 .logo-calim {
-    background-image: url('../src/calim.png');
+    background-image: url('/src/calim.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 20px;
@@ -84,7 +84,7 @@ button, li, a {
 }
 
 .logo-huergo {
-    background-image: url('../src/huergo.png');
+    background-image: url('/src/huergo.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 20px;
