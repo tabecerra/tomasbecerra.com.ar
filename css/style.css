@@ -259,6 +259,21 @@ button, li, a {
     line-height: 2rem;
 }
 
+.project-content {
+    padding: 7rem 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.project-content h1 {
+    font-size: 3rem;
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
 .socials-buttons {
     font-size: 2rem;
     cursor: pointer;
