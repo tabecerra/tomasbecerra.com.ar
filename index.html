@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomás Becerra</title>
-	<link rel="icon" href="/src/logo.png" type="image/x-icon">
+	<link rel="icon" href="./src/logo.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 	<link rel="icon" href="data:,">
 </head>
 <body class="primary-background">
 	<header>
 		<div class="navbar">
-				<img src="/src/yo.jpeg" alt="Becerra Tomás" class="circle-img">
+				<img src="./src/yo.jpeg" alt="Becerra Tomás" class="circle-img">
 				<nav id="navbar-web" class="border-pill rich-blanck-background">
 					<ul class="nav-items">
 						<li><a href="#home" class="text-cream">Home</a></li>
@@ -76,7 +76,7 @@
 		<div class="about-content">
 			<h1 class="text-cream">About</h1>
 			<div class="about-me">
-				<p class="text-grey mt-1 lh-lg fs-5 text">Hi there! I’m <strong class="text-orange">Tomás Becerra</strong>, a 20-year-old tech enthusiast with a curious mind and a constant drive to learn.<br> I graduated as a <i class="fa-solid fa-desktop"></i> <strong class="text-orange">Computer Technician</strong> from <span class="logo-huergo"></span> <strong class="text-orange">Instituto Industrial Luis A. Huergo</strong>, where I discovered my passion for solving problems through code.<br> Currently, I work at  <span class="logo-calim"></span> <strong class="text-orange">Calim Estudio Contable Digital</strong class="text-orange">, blending my technical skills with the practical world of digital accounting.</p> <p class="text-grey mt-1 lh-lg fs-5 text">I’m a sociable person who loves connecting with others, but I also cherish my focus time: coding, playing chess (always up for a game!), and practicing handball as a hobby are my creative outlets.<br>Right now, I’m laser-focused on mastering emerging technologies while working toward my goal becoming a <i class="fa-solid fa-gear"></i> <strong class="text-orange">Systems Engineer</strong> who bridges innovation with real-world solution who bridges innovation with real-world solutions.</p>
+				<p class="text-grey mt-1 lh-lg fs-5 text">Hi there! I’m <strong class="text-orange">Tomás Becerra</strong>, a 20-year-old tech enthusiast with a curious mind and a constant drive to learn.<br> I graduated as a <i class="fa-solid fa-desktop"></i> <strong class="text-orange">Computer Technician</strong> from <span class="logo-huergo"></span> <strong class="text-orange">Instituto Industrial Luis A. Huergo</strong>, where I discovered my passion for solving problems through code.<br> Currently, I work at  <span class="logo-calim"></span> <strong class="text-orange">Calim Estudio Contable Digital</strong class="text-orange">, blending my technical skills with the practical world of digital accounting.</p> <p class="text-grey mt-1 lh-lg fs-5 text">I’m a sociable person who loves connecting with others, but I also cherish my focus time: coding, playing chess (always up for a game!), and practicing handball as a hobby are my creative outlets.<br>Right now, I’m laser-focused on mastering emerging technologies while working toward my goal becoming a <i class="fa-solid fa-gear"></i> <strong class="text-orange">Computer Engineer</strong> who bridges innovation with real-world solution who bridges innovation with real-world solutions.</p>
 			</div>
 		</div>
 	</section>
@@ -86,34 +86,37 @@
 			<div class="projects">
 				<div class="gestor-de-productos">
 					<div class="gestor-img">
-						<img src="/src/dxtgp.png" alt="Gestor de productos DXT">
+						<img src="./src/dxtgp.png" alt="Gestor de productos DXT">
 					</div>
 					<div class="content-projects">
-						<h2 class="text-orange">Gestor de productos</h2>
-						<ul class="languages">
-							<li><img src="/src/python.png" alt="python">
-								<span class="text-cream">Python</span>
-							</li>
-							<li><img src="/src/sqlite.png" alt="sqlite">
-								<span class="text-cream">SQLite</span>
-							</li>
-							<li><img src="/src/pyqt5.png" alt="pyqt5">
-								<span class="text-cream">PyQt5</span>
-							</li>
-							<li><img src="/src/peewee.png" alt="peewee">
-								<span class="text-cream">Peewee</span>
-							</li>
-						</ul>
+						<h3 class="text-orange">Gestor de productos</h3>
+						<p class="text-cream">August 19, 2023 - September 1, 2023</p>
+						<div class="container-languages">
+							<ul class="languages">
+								<li><img src="./src/python.png" alt="python">
+									<span class="text-cream">Python</span>
+								</li>
+								<li><img src="./src/sqlite.png" alt="sqlite">
+									<span class="text-cream">SQLite</span>
+								</li>
+								<li><img src="./src/pyqt5.png" alt="pyqt5">
+									<span class="text-cream">PyQt5</span>
+								</li>
+								<li><img src="./src/peewee.png" alt="peewee">
+									<span class="text-cream">Peewee</span>
+								</li>
+								<a 
+								class="text-rich-blanck" 
+								href="https://github.com/tabecerra/gestor-de-productos"
+								target="_blank"
+								>
+								<i class="fa-solid fa-code me-0"></i>Code
+								</a>
+							</ul>
+						</div>
 						<p class="text-grey mb-1">This product manager is an application developed with Python, using SQLite as the database, Peewee as the ORM, and PyQt5 for the graphical interface.<br> 
 						It allows users to perform key operations such as adding, editing, deleting, and searching for products in an easy and intuitive way.<br> 
 						Its design enables efficient inventory management, providing a smooth user experience.</p>
-						<a 
-						class="text-rich-blanck code-button" 
-						href="https://github.com/tabecerra/gestor-de-productos"
-						target="_blank"
-						>
-						<i class="fa-solid fa-code"></i> Code
-						</a>
 					</div>
 				</div>
 			</div>
@@ -121,8 +124,43 @@
 	</section>
 	<section id="changelog" class="section">
 		<div class="presentation-content">
-			<h1 class="text-cream">Changelog</h1>
-			<p class="text-grey mt-1 lh-lg fs-5 text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est ex laborum debitis rem nostrum voluptatibus quis, id eveniet similique pariatur atque suscipit labore quasi accusamus praesentium. Vel, blanditiis fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at nemo, repellendus ad et exercitationem aliquid quis debitis ut repellat ipsam nesciunt unde odio error commodi, est nobis maxime saepe.</p>
+			<h1 class="text-cream">Work & Education</h1>
+			<div class="experience-container">
+				<div class="huergo-container">
+					<img class="huergo-img" src="./src/huergo.png" alt="Instituto Industrial Luis A. Huergo">
+					<div class="huergo-content">
+						<h3 class="text-orange">Instituto Industrial Luis A. Huergo</h3>
+						<p class="text-cream">Computer Technician</p>
+						<p class="text-grey mb-1">Jan 2018 – Dec 2024</p>
+					</div>
+				</div>
+				<div class="calim-container">
+					<img class="calim-img" src="./src/calim.png" alt="Calim - Estudio Contable Digital">
+					<div class="calim-content">
+						<h3 class="text-orange">Calim - Estudio Contable Digital</h3>
+						<p class="text-cream">Full Stack Developer</p>
+						<p class="text-grey mb-1">Dec 2023 – Present</p>
+					</div>
+				</div>
+				<div class="undav-container">
+					<img class="undav-img" src="./src/undav.png" alt="Universidad Nacional de Avellaneda">
+					<div class="undav-content">
+						<h3 class="text-orange">Universidad Nacional de Avellaneda</h3>
+						<p class="text-cream">Computer Engineer</p>
+						<p class="text-grey mb-1">Jul 2024 – Present</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-container">
+			<div class="line"></div>
+			<div class="copyright">
+				<p class="text-grey">
+					© 2025 Tomás Becerra
+				</p>
+			</div>
 			<div class="more-data">
 				<a 
 					class="text-cream" 
@@ -140,7 +178,7 @@
 				</a>
 			</div>
 		</div>
-	</section>
-	<script src="/js/script.js"></script>
+	</footer>
+	<script src="./js/script.js"></script>
 </body>
 </html>
