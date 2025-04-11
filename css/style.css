@@ -285,9 +285,15 @@ button, li, a {
 }
 
 .presentation-content {
-    padding: 10rem 10%;
+    padding: 8rem 10%;
     width: 100%;
     height: 100%;
+}
+
+.work-education-content {
+    padding: 8rem 10%;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .presentation-content h1 {
@@ -437,6 +443,13 @@ button, li, a {
 
 /* RESPONSIVE */
 @media(max-width: 992px) {
+
+    .section {
+        height: auto;
+        display: block;
+        scroll-snap-align: none;
+    }
+
     .border-pill, .nav-items, .contact-button {
         display: none;
     }
@@ -454,14 +467,11 @@ button, li, a {
     }
     
     .project-content {
-        padding: 7rem 10%;
+        padding: 4rem 10%;
         width: 100%;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        overflow-x: hidden;
+        min-height: auto;
+        margin-bottom: 4rem;
+        display: block;
     }
     
     .project-content h1 {
@@ -476,7 +486,8 @@ button, li, a {
     .about-content {
         padding: 4rem 10%;
         width: 100%;
-        height: 100%;
+        min-height: auto;
+        margin-bottom: 4rem;
     }
     
     .about-content h1 {
@@ -489,7 +500,7 @@ button, li, a {
     }
 
     .presentation-content {
-        padding: 15rem 10%;
+        padding: 7rem 10%;
         width: 100%;
         height: 100%;
     }
@@ -505,6 +516,12 @@ button, li, a {
 
     .gestor-de-productos {
         display: block;
+    }
+
+    .work-education-content {
+        padding: 4rem 10%;
+        width: 100%;
+        min-height: 100vh;
     }
 
     .gestor-img {
