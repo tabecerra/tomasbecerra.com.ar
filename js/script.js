@@ -20,39 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-document.addEventListener('scroll', function () {
+document.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
     const menuItems = document.querySelectorAll("ul li");
-    const home = document.getElementById('home');
-    const about = document.getElementById('about');
-    const projects = document.getElementById('projects');
-    const changelog = document.getElementById('changelog');
-
-    const homePosition = home.offsetTop - home.offsetTop;
-    const aboutPosition = about.offsetTop - home.offsetTop;
-    const projectsPosition = projects.offsetTop - home.offsetTop;
-    const changelogPosition = changelog.offsetTop - home.offsetTop;
-
-    const scrollPosition = window.scrollY - home.offsetTop;
-
-    const margin = 100;
 
     menuItems.forEach((item) => {
-        item.classList.remove('active');
+        item.classList.remove("active");
     });
 
-    if (scrollPosition >= homePosition && scrollPosition < aboutPosition - margin) {
-        document.querySelector('li a[href="#home"]').parentElement.classList.add('active');
-    } else if (scrollPosition >= aboutPosition - margin && scrollPosition < projectsPosition - margin) {
-        document.querySelector('li a[href="#about"]').parentElement.classList.add('active');
-    } else if (scrollPosition >= projectsPosition - margin && scrollPosition < changelogPosition - margin) {
-        document.querySelector('li a[href="#projects"]').parentElement.classList.add('active');
-    } else if (scrollPosition >= changelogPosition - margin) {
-        document.querySelector('li a[href="#changelog"]').parentElement.classList.add('active');
-    }
-    if (window.scrollY <= home.offsetTop) {
-        menuItems.forEach((item) => {
-            item.classList.remove('active');
-        });
-        document.querySelector('li a[href="#home"]').parentElement.classList.add('active');
-    }
+    sections.forEach((section) => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+
+        if (scrollPosition >= top && scrollPosition < top + height) {
+            const id = section.getAttribute("id");
+            const navItem = document.querySelector(`li a[href="#${id}"]`);
+            if (navItem) {
+                navItem.parentElement.classList.add("active");
+            }
+        }
+    });
 });

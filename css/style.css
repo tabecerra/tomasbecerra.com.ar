@@ -441,6 +441,40 @@ button, li, a {
     background-color: #EAF8BF;
 }
 
+.skills-content {
+    padding: 8rem 10%;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1em;
+    padding: 1em;
+}
+
+.groups-skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
 /* RESPONSIVE */
 @media(max-width: 992px) {
 
@@ -570,6 +604,21 @@ button, li, a {
 
     .content-projects img {
         width: 1em;
+    }
+
+    .skills-content {
+        padding: 4rem 10%;
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 4rem;
+    }
+
+    .skills-container {
+        display: block;
+    }
+
+    .groups-skills {
+        display: block;
     }
 
 
