@@ -18,23 +18,20 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-.section {
-    height: 100vh;
-    scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 button, li, a {
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: none;
 }
 
 .primary-background{
     background-color: #080708;
+    background-image: url('../src/waves-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .secondary-background{
@@ -88,8 +85,8 @@ button, li, a {
 }
 
 .huergo-img {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     margin-right: 1em;
 }
 
@@ -101,8 +98,8 @@ button, li, a {
 }
 
 .calim-img {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     margin-right: 1em;
 }
 
@@ -114,8 +111,8 @@ button, li, a {
 }
 
 .undav-img {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     margin-right: 1em;
 }
 
@@ -185,7 +182,7 @@ button, li, a {
     border: 3px solid #FF7700;
     border-radius: 50%;
     object-fit: cover;
-    width: 40px;
+    width: 50px;
 }
 
 .navbar {
@@ -248,7 +245,7 @@ button, li, a {
 }
 
 .navbar .toggle-btn {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     cursor: pointer;
     display: none;
 }
@@ -285,7 +282,7 @@ button, li, a {
 }
 
 .presentation-content {
-    padding: 8rem 10%;
+    padding: 23vh 10%;
     width: 100%;
     height: 100%;
 }
@@ -296,26 +293,44 @@ button, li, a {
     min-height: 100vh;
 }
 
+.work-education-content h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.work-education-content h3 {
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+
+.work-education-content p {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
+}
+
 .presentation-content h1 {
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
 }
 
 .presentation-content p {
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
 }
 
 .project-content {
+    min-height: 100vh;
     padding: 6rem 10%;
 }
 
 .project-content h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.project-content h3 {
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
 }
 
 .project-content p {
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
 }
 
 .about-content {
@@ -325,16 +340,16 @@ button, li, a {
 }
 
 .about-content h1 {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .about-content p {
-    font-size: 1.1rem;
-    line-height: 2rem;
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
 }
 
 .socials-buttons {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
     cursor: pointer;
 }
 
@@ -345,10 +360,6 @@ button, li, a {
 .projects {
     margin-top: 2em;
     display: inline-block;
-}
-
-.projects h3 {
-    margin-bottom: .4em;
 }
 
 .gestor-de-productos {
@@ -379,11 +390,21 @@ button, li, a {
     width: 1em;
 }
 
-.content-projects p {
-    text-align: justify;
-    font-size: 14px;
+.content-projects h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     margin-bottom: 1em;
 }
+
+.content-projects h3 {
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+
+.content-projects p {
+    text-align: justify;
+    font-size: clamp(1.2rem, 1.2vw, 1.4 rem);
+    margin-bottom: 1em;
+}
+
 
 .languages {
     display: flex;
@@ -433,9 +454,19 @@ button, li, a {
     text-align: center;
 }
 
+.footer-container p {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
+}
+
+.footer-container a {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    cursor: pointer;
+}
+
 .line {
     width: 100%;
-    height: 1px;
+    height: 3px;
     margin-top: 3em;
     margin-bottom: 3em;
     background-color: #EAF8BF;
@@ -445,6 +476,20 @@ button, li, a {
     padding: 8rem 10%;
     width: 100%;
     min-height: 100vh;
+}
+
+.skills-content h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.skills-content h3 {
+    padding-top: 15px;
+    font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+}
+
+.skills-content p {
+    font-size: clamp(1.2rem, 1.2vw, 1.4rem);
+    line-height: 1.8em;
 }
 
 .skills-container {
@@ -509,7 +554,7 @@ button, li, a {
     }
     
     .project-content h1 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
     }
     
     .project-content p {
@@ -525,7 +570,7 @@ button, li, a {
     }
     
     .about-content h1 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
     }
     
     .about-content p {
@@ -540,7 +585,7 @@ button, li, a {
     }
 
     .presentation-content h1 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
     }
     
     .presentation-content p {
