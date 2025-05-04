@@ -1,0 +1,272 @@
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.home-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./src/fortland-home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.home-content {
+    padding: 25vh 0 ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.home-text h1 {
+    color: #E0E1DD;
+    font-size: 3rem;
+}
+
+.home-text h2 {
+    color: #3E7BD7;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.home-text p {
+    color: #aaa;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.home-contact-button {
+    background-color: #06D6A0;
+    color: #1B1725;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    color: #E0E1DD;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+li:hover {
+    color: #06D6A0;
+}
+
+body {
+    padding-top: var(--navbar-height);
+}
+
+:root {
+    --navbar-height: 70px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navbar-height);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.home-navbar h2 {
+    color: #3E7BD7;
+}
+
+.home-navbar ul {
+    margin-left: auto;
+}
+
+.services-container {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    background-color: #E0E1DD;
+}
+
+.services-content {
+    padding-top: 20vh;
+    padding-bottom: 25vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: block;
+    text-align: left;
+}
+
+.services-content h1 {
+    font-size: 3rem;
+    padding-bottom: 10vh;
+    color: #1B1725;
+}
+
+.services-cards {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.services-cards i {
+    padding: 1rem;
+    font-size: 3.8rem;
+    color: #3E7BD7;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #1B1725;
+    color: #E0E1DD;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    height: auto;
+    text-align: left;
+}
+
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    text-align: left;
+}
+
+.about-testimonials-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #1B1725;
+}
+
+.about-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1725;
+    padding-top: 20vh;
+    padding-left: 5%;
+}
+
+.about-container h1 {
+    color: #E0E1DD;
+    font-size: 3rem;
+    padding-bottom: 3vh;
+}
+.about-container p {
+    color: #aaa;
+    font-size: 1.125rem;
+    padding-bottom: 10vh;
+}
+
+.testimonials-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1725;
+}
+
+.testimonials-container h1 {
+    color: #E0E1DD;
+    font-size: 3rem;
+    padding: 2vh 5%;
+}
+
+.testimonials-content {
+    padding-top: 5vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    padding: 15px;
+    margin: 15px;
+    background-color: #3E7BD7;
+    border-radius: 10px;
+    width: 500px;
+    height: 200px;
+    display: flex;
+}
+
+.testimonial-text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.testimonials-container h1 {
+    color: #E0E1DD;
+    font-size: 3rem;
+    padding-bottom: 3vh;
+}
+.testimonials-container h4 {
+    color: #E0E1DD;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.testimonials-container p {
+    color: #E0E1DD;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
