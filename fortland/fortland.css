@@ -250,14 +250,12 @@ header {
 .testimonials-container h1 {
     color: #E0E1DD;
     font-size: 3rem;
-    padding: 20vh 5%;
+    padding: 25vh 5%;
     
 }
 
 .testimonials-content {
-    padding-top: 5vh;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 5vh 5%;
     display: flex;
     justify-content: center;
     align-items: center;
