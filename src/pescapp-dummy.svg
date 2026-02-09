@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-label="Pescapp - imagen dummy">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b0a0d"/>
+      <stop offset="1" stop-color="#141217"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#FF7700"/>
+      <stop offset="1" stop-color="#f83439"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <g opacity="0.18">
+    <path d="M0 180H1400" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 360H1400" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 540H1400" stroke="#ffffff" stroke-width="1"/>
+    <path d="M0 720H1400" stroke="#ffffff" stroke-width="1"/>
+    <path d="M200 0V900" stroke="#ffffff" stroke-width="1"/>
+    <path d="M400 0V900" stroke="#ffffff" stroke-width="1"/>
+    <path d="M600 0V900" stroke="#ffffff" stroke-width="1"/>
+    <path d="M800 0V900" stroke="#ffffff" stroke-width="1"/>
+    <path d="M1000 0V900" stroke="#ffffff" stroke-width="1"/>
+    <path d="M1200 0V900" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- Phone mock -->
+  <g transform="translate(860,110)" filter="url(#shadow)">
+    <rect x="0" y="0" width="420" height="680" rx="42" fill="#0f0e12" stroke="rgba(234,248,191,0.20)" stroke-width="2"/>
+    <rect x="18" y="18" width="384" height="644" rx="32" fill="#0b0a0d"/>
+
+    <!-- Header -->
+    <g transform="translate(44,54)">
+      <circle cx="16" cy="16" r="16" fill="rgba(255,119,0,0.18)" stroke="rgba(255,119,0,0.35)" stroke-width="1.5"/>
+      <!-- simple fish -->
+      <path d="M14 16c8-10 22-10 30 0-8 10-22 10-30 0z" fill="#FF7700"/>
+      <circle cx="31" cy="14" r="2.2" fill="#0b0a0d"/>
+      <text x="58" y="23" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="22" font-weight="800" fill="#EAF8BF">Pescapp</text>
+      <text x="58" y="46" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Clima + recomendaciones con IA</text>
+    </g>
+
+    <!-- Weather cards -->
+    <g transform="translate(44,130)">
+      <rect x="0" y="0" width="332" height="120" rx="20" fill="rgba(23,23,23,0.85)" stroke="rgba(234,248,191,0.12)" stroke-width="1.5"/>
+      <text x="20" y="32" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Pron�stico</text>
+      <text x="20" y="76" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="44" font-weight="900" fill="#EAF8BF">18�</text>
+      <text x="118" y="66" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Viento</text>
+      <text x="118" y="90" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="22" font-weight="800" fill="#EAF8BF">12 km/h</text>
+      <text x="236" y="66" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Nubes</text>
+      <text x="236" y="90" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="22" font-weight="800" fill="#EAF8BF">45%</text>
+    </g>
+
+    <g transform="translate(44,270)">
+      <rect x="0" y="0" width="332" height="170" rx="20" fill="rgba(23,23,23,0.85)" stroke="rgba(234,248,191,0.12)" stroke-width="1.5"/>
+      <text x="20" y="34" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Recomendaci�n (IA)</text>
+      <rect x="20" y="52" width="120" height="28" rx="999" fill="url(#accent)"/>
+      <text x="80" y="72" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="13" font-weight="900" fill="#0b0a0d">ACTIVO</text>
+      <text x="20" y="110" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="18" font-weight="900" fill="#EAF8BF">Equipo sugerido</text>
+      <text x="20" y="138" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Ca�a media � Se�uelo tipo minnow � L�nea 0.28</text>
+      <text x="20" y="160" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="14" fill="#a9a9a9">Mejor horario: 18:0020:00</text>
+    </g>
+  </g>
+
+  <!-- Left text -->
+  <g transform="translate(90,165)">
+    <text x="0" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="48" font-weight="950" fill="#EAF8BF">Pescapp</text>
+    <rect x="0" y="18" width="270" height="6" rx="3" fill="url(#accent)"/>
+    <text x="0" y="58" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="18" fill="#a9a9a9">
+      App de pesca con IA: muestra el clima y, seg�n las condiciones,
+    </text>
+    <text x="0" y="84" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="18" fill="#a9a9a9">
+      recomienda el equipo ideal para salir a pescar.
+    </text>
+
+    <g transform="translate(0,120)">
+      <rect x="0" y="0" width="108" height="30" rx="999" fill="rgba(255,119,0,0.14)" stroke="rgba(255,119,0,0.22)" stroke-width="1.2"/>
+      <text x="54" y="20" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="13" font-weight="850" fill="#FF7700">React</text>
+      <rect x="120" y="0" width="108" height="30" rx="999" fill="rgba(255,119,0,0.14)" stroke="rgba(255,119,0,0.22)" stroke-width="1.2"/>
+      <text x="174" y="20" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="13" font-weight="850" fill="#FF7700">Expo</text>
+      <rect x="240" y="0" width="108" height="30" rx="999" fill="rgba(255,119,0,0.14)" stroke="rgba(255,119,0,0.22)" stroke-width="1.2"/>
+      <text x="294" y="20" text-anchor="middle" font-family="Inter, system-ui, -apple-system, Segoe UI, Arial" font-size="13" font-weight="850" fill="#FF7700">IA</text>
+    </g>
+  </g>
+</svg>
+

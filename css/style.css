@@ -4,6 +4,11 @@ html {
     height: 100%;
 }
 
+:root {
+    --x: 50vw;
+    --y: 50vh;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,8 +19,116 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1080708;
     transition: transform 0.3s ease-in-out;
+}
+
+.location-icon {
+    margin-right: 10px;
+}
+
+/* Font Awesome Free no trae "regular/outline" para location-dot:
+   simulamos contorno con text-stroke */
+.location-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.6px #EAF8BF;
+    opacity: 0.95;
+}
+
+.hero-languages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.hero-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
+    line-height: 1;
+    color: #EAF8BF;
+    background-color: rgba(234, 248, 191, 0.08);
+    border: 1px solid rgba(234, 248, 191, 0.18);
+}
+
+.hero-pill-icon {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 auto;
+    display: block;
+    margin-right: 6px;
+}
+
+#home {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #080708;
+    background-image:
+        radial-gradient(
+            circle at var(--x) var(--y),
+            rgba(255,119,0,0.18) 0,
+            rgba(255,119,0,0.12) 140px,
+            rgba(255,119,0,0.06) 260px,
+            transparent 420px
+        ),
+        repeating-linear-gradient(
+            to right,
+            rgba(255,255,255,0.05) 0,
+            rgba(255,255,255,0.05) 1px,
+            transparent 1px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05) 0,
+            rgba(255,255,255,0.05) 1px,
+            transparent 1px,
+            transparent 40px
+        );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 220px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 7, 8, 0) 0%,
+        rgba(8, 7, 8, 0.75) 55%,
+        rgba(8, 7, 8, 1) 100%
+    );
+    z-index: 0;
+}
+
+.presentation-content {
+    position: relative;
+    z-index: 1;
+}
+
+#skills,
+#changelog,
+#projects,
+#about,
+footer {
+    background-color: #080708;
 }
 
 button, li, a {
@@ -27,11 +140,7 @@ button, li, a {
 
 .primary-background{
     background-color: #080708;
-    background-image: url('../src/waves-bg.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    background-image: none;
 }
 
 .secondary-background{
@@ -133,6 +242,7 @@ button, li, a {
 @supports (-webkit-background-clip: text) {
     .text-orange {
         background: linear-gradient(90deg,#FF7700, #f83439);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
     }
@@ -282,9 +392,97 @@ button, li, a {
 }
 
 .presentation-content {
-    padding: 23vh 10%;
+    padding: 7rem 10% 3rem;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes home-rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(1px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+html.js #home .presentation-content h1,
+html.js #home .presentation-content p,
+html.js #home .presentation-content .hero-languages,
+html.js #home .presentation-content .more-data,
+html.js #home .presentation-content .stats {
+    opacity: 0;
+    transform: translateY(28px);
+}
+
+html.js.page-loaded #home .presentation-content h1,
+html.js.page-loaded #home .presentation-content p,
+html.js.page-loaded #home .presentation-content .hero-languages,
+html.js.page-loaded #home .presentation-content .more-data,
+html.js.page-loaded #home .presentation-content .stats {
+    animation: home-rise-in 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+html.js.page-loaded #home .presentation-content h1 { animation-delay: 0ms; }
+html.js.page-loaded #home .presentation-content p:nth-of-type(1) { animation-delay: 80ms; }
+html.js.page-loaded #home .presentation-content p:nth-of-type(2) { animation-delay: 160ms; }
+html.js.page-loaded #home .presentation-content .hero-languages { animation-delay: 240ms; }
+html.js.page-loaded #home .presentation-content .more-data { animation-delay: 320ms; }
+html.js.page-loaded #home .presentation-content .stats { animation-delay: 380ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    html.js #home .presentation-content h1,
+    html.js #home .presentation-content p,
+    html.js #home .presentation-content .hero-languages,
+    html.js #home .presentation-content .more-data,
+    html.js #home .presentation-content .stats {
+        opacity: 1;
+        transform: none;
+        animation: none !important;
+        filter: none;
+    }
+}
+
+.stats {
+    margin-top: auto;
+    width: calc(100% + 20%);
+    margin-left: -10%;
+    margin-right: -10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 1.25rem 10% 1.1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.stat-number {
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.stat-label {
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    line-height: 1.35;
+    opacity: 0.9;
+    max-width: 220px;
 }
 
 .work-education-content {
@@ -529,6 +727,14 @@ button, li, a {
         scroll-snap-align: none;
     }
 
+    #home {
+        background-attachment: scroll;
+    }
+
+    .hero-break {
+        display: none;
+    }
+
     .border-pill, .nav-items, .contact-button {
         display: none;
     }
@@ -579,9 +785,26 @@ button, li, a {
     }
 
     .presentation-content {
-        padding: 7rem 10%;
+        padding: 7rem 10% 1rem;
         width: 100%;
         height: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.25rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1rem 0 0.25rem;
+    }
+
+    .stat {
+        width: 100%;
+        justify-content: flex-start;
+        text-align: left;
     }
 
     .presentation-content h1 {
