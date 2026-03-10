@@ -141,6 +141,12 @@ button, li, a {
     background-attachment: fixed;
 }
 
+@media (max-width: 992px) {
+    .primary-background {
+        background-attachment: scroll;
+    }
+}
+
 .secondary-background{
     background-color: #FF7700;
 }
@@ -217,8 +223,9 @@ button, li, a {
 .timeline-col--mid  { grid-column: 2; display: flex; justify-content: center; }
 .timeline-col--right{ grid-column: 3; }
 
-.timeline-item--reverse .timeline-col--left { grid-column: 1; }
-.timeline-item--reverse .timeline-col--right { grid-column: 3; }
+/* En desktop: reverse intercambia posiciones (card derecha, fechas izquierda) */
+.timeline-item--reverse .timeline-col--left { grid-column: 3; }
+.timeline-item--reverse .timeline-col--right { grid-column: 1; }
 
 .timeline-dot {
     width: 38px;
@@ -943,10 +950,14 @@ html.js.page-loaded #home .presentation-content .stats { animation-delay: 380ms;
         line-height: 1.8rem;
     }
 
+    #about {
+        min-height: 100vh;
+    }
+
     .about-content {
         padding: 4rem 10%;
         width: 100%;
-        min-height: auto;
+        min-height: 100vh;
         margin-bottom: 4rem;
     }
     
@@ -968,18 +979,25 @@ html.js.page-loaded #home .presentation-content .stats { animation-delay: 380ms;
     .stats {
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.25rem;
         width: calc(100% + 20%);
         margin-left: -10%;
         margin-right: -10%;
+        margin-top: 0;
         padding: 1rem 10% 1rem;
     }
 
     .stat {
-        justify-content: center;
+        justify-content: flex-start;
         text-align: left;
+        width: 100%;
     }
+
+    /* Orden en mobile: Issues (1º) → Users (2º) → Years (3º) */
+    .stat:nth-child(1) { order: 3; }
+    .stat:nth-child(2) { order: 1; }
+    .stat:nth-child(3) { order: 2; }
 
     .presentation-content h1 {
         font-size: clamp(1.5rem, 2.5vw, 3rem);
@@ -1022,10 +1040,14 @@ html.js.page-loaded #home .presentation-content .stats { animation-delay: 380ms;
         grid-column: 2;
     }
 
-    .timeline-item:not(.timeline-item--reverse) .timeline-col--left { grid-row: 1; }
-    .timeline-item:not(.timeline-item--reverse) .timeline-col--right { grid-row: 2; }
-    .timeline-item--reverse .timeline-col--right { grid-row: 1; }
-    .timeline-item--reverse .timeline-col--left { grid-row: 2; }
+    /* En mobile: reverse usa el mismo layout que los demás (card izquierda, fechas abajo) */
+    .timeline-item--reverse .timeline-col--left,
+    .timeline-item--reverse .timeline-col--right {
+        grid-column: 2;
+    }
+
+    .timeline-col--left { grid-row: 1; }
+    .timeline-col--right { grid-row: 2; }
 
     .timeline-item--reverse .timeline-dates {
         text-align: left;
