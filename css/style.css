@@ -190,7 +190,6 @@ button, li, a {
     margin-bottom: -4px;
 }
 
-/* WORK & EDUCATION (timeline estilo CV) */
 .experience-timeline {
     position: relative;
     margin-top: 1.5rem;
@@ -200,11 +199,10 @@ button, li, a {
 .experience-timeline::before {
     content: "";
     position: absolute;
-    left: 50%;
+    left: 19px;
     top: 0.75rem;
     bottom: 0.75rem;
     width: 2px;
-    transform: translateX(-50%);
     background: rgba(255, 119, 0, 0.45);
     z-index: 0;
 }
@@ -213,19 +211,21 @@ button, li, a {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 92px minmax(0, 1fr);
+    grid-template-columns: 44px minmax(0, 1fr);
     gap: 1.25rem;
     align-items: start;
     margin-top: 1.75rem;
 }
 
-.timeline-col--left { grid-column: 1; }
-.timeline-col--mid  { grid-column: 2; display: flex; justify-content: center; }
-.timeline-col--right{ grid-column: 3; }
+.timeline-col--line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-/* En desktop: reverse intercambia posiciones (card derecha, fechas izquierda) */
-.timeline-item--reverse .timeline-col--left { grid-column: 3; }
-.timeline-item--reverse .timeline-col--right { grid-column: 1; }
+.timeline-col--content {
+    min-width: 0;
+}
 
 .timeline-dot {
     width: 38px;
@@ -241,11 +241,12 @@ button, li, a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0.55rem;
+    flex-shrink: 0;
     user-select: none;
 }
 
 .timeline-card {
+    margin: 0;
     background: rgba(23, 23, 23, 0.9);
     border: 1px solid rgba(234, 248, 191, 0.12);
     border-radius: 16px;
@@ -299,6 +300,22 @@ button, li, a {
     min-width: 0;
 }
 
+.timeline-summary__right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.timeline-summary__right .timeline-dates {
+    margin: 0;
+    text-align: right;
+}
+
+.timeline-summary__right .timeline-dates p {
+    font-size: 0.9rem;
+}
+
 .timeline-toggle {
     width: 34px;
     height: 34px;
@@ -322,6 +339,7 @@ button, li, a {
 
 .timeline-body {
     margin-top: 0.85rem;
+    padding-left: calc(44px + 0.85rem);
 }
 
 .timeline-bullets {
@@ -355,16 +373,8 @@ button, li, a {
 }
 
 .timeline-dates {
-    padding-top: 0.45rem;
+    margin: 0;
     text-align: left;
-}
-
-.timeline-item:not(.timeline-item--reverse) .timeline-dates {
-    text-align: left;
-}
-
-.timeline-item--reverse .timeline-dates {
-    text-align: right;
 }
 
 .timeline-dates p {
@@ -1014,43 +1024,37 @@ html.js.page-loaded #home .presentation-content .stats { animation-delay: 380ms;
         min-height: 100vh;
     }
 
-    .experience-timeline::before {
-        left: 19px;
-        transform: none;
-    }
-
     .timeline-item {
-        grid-template-columns: 44px minmax(0, 1fr);
-        grid-template-rows: auto auto;
         gap: 0.75rem 1rem;
     }
 
-    .timeline-col--mid {
-        grid-column: 1;
-        grid-row: 1 / 3;
-        justify-content: flex-start;
+    /* En mobile: fecha debajo del título y lugar */
+    .timeline-summary {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "content toggle" "dates dates";
+        gap: 0.35rem 1rem;
     }
 
-    .timeline-dot {
-        margin-top: 0.65rem;
+    .timeline-summary__content {
+        grid-area: content;
     }
 
-    .timeline-col--left,
-    .timeline-col--right {
-        grid-column: 2;
+    .timeline-summary__right {
+        display: contents;
     }
 
-    /* En mobile: reverse usa el mismo layout que los demás (card izquierda, fechas abajo) */
-    .timeline-item--reverse .timeline-col--left,
-    .timeline-item--reverse .timeline-col--right {
-        grid-column: 2;
-    }
-
-    .timeline-col--left { grid-row: 1; }
-    .timeline-col--right { grid-row: 2; }
-
-    .timeline-item--reverse .timeline-dates {
+    .timeline-summary__right .timeline-dates {
+        grid-area: dates;
         text-align: left;
+        margin-top: 0.25rem;
+        padding-left: calc(44px + 0.85rem);
+    }
+
+    .timeline-summary__right .timeline-toggle {
+        grid-area: toggle;
+        align-self: start;
     }
 
     .projects-grid {
