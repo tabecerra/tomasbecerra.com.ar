@@ -21,12 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleBtnIcon = document.querySelector('.toggle-btn i')
     const dropBoxMenu = document.querySelector('.dropbox-menu')
 
-    menuItems[0].classList.add('active');
+    if (menuItems.length > 0) {
+        menuItems[0].classList.add('active');
+    }
 
-    toggleBtn.onclick = function() {
-        dropBoxMenu.classList.toggle('open')
-        const isOpen = dropBoxMenu.classList.contains('open')
-        toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+    if (toggleBtn && toggleBtnIcon && dropBoxMenu) {
+        toggleBtn.onclick = function () {
+            dropBoxMenu.classList.toggle('open')
+            const isOpen = dropBoxMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
     }
 });
 
@@ -55,26 +59,34 @@ document.addEventListener("scroll", () => {
 
 (() => {
     const root = document.documentElement;
-    let x = window.innerWidth / 2;
-    let y = window.innerHeight / 2;
-    let rafId = null;
+    let targetX = window.innerWidth / 2;
+    let targetY = window.innerHeight / 2;
+    let currentX = targetX;
+    let currentY = targetY;
+
+    const smoothing = 0.05;
 
     const commit = () => {
-        rafId = null;
-        root.style.setProperty("--x", `${x}px`);
-        root.style.setProperty("--y", `${y}px`);
+        currentX += (targetX - currentX) * smoothing;
+        currentY += (targetY - currentY) * smoothing;
+
+        root.style.setProperty("--x", `${currentX}px`);
+        root.style.setProperty("--y", `${currentY}px`);
+
+        requestAnimationFrame(commit);
     };
 
     const onMove = (e) => {
-        x = e.clientX;
-        y = e.clientY;
-        if (rafId === null) rafId = requestAnimationFrame(commit);
+        targetX = e.clientX;
+        targetY = e.clientY;
     };
 
-    root.style.setProperty("--x", `${x}px`);
-    root.style.setProperty("--y", `${y}px`);
+    root.style.setProperty("--x", `${currentX}px`);
+    root.style.setProperty("--y", `${currentY}px`);
 
     window.addEventListener("pointermove", onMove, { passive: true });
+
+    requestAnimationFrame(commit);
 })();
 
 (() => {
@@ -143,4 +155,55 @@ document.addEventListener("scroll", () => {
     );
 
     numbers.forEach((n) => io.observe(n));
+})();
+
+(() => {
+    const el = document.getElementById("subtitle-dynamic");
+    if (!el) return;
+
+    const reduceMotion =
+        window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const phrases = ["Handball player", "AI enthusiast", "Chess player"];
+    if (reduceMotion) {
+        el.textContent = phrases[0];
+        return;
+    }
+
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let deleting = false;
+
+    const typeSpeedMs = 55;
+    const deleteSpeedMs = 32;
+    const holdMs = 900;
+
+    const tick = () => {
+        const full = phrases[phraseIdx];
+
+        if (!deleting) {
+            charIdx = Math.min(full.length, charIdx + 1);
+            el.textContent = full.slice(0, charIdx);
+            if (charIdx >= full.length) {
+                deleting = true;
+                setTimeout(tick, holdMs);
+                return;
+            }
+            setTimeout(tick, typeSpeedMs);
+            return;
+        }
+
+        charIdx = Math.max(0, charIdx - 1);
+        el.textContent = full.slice(0, charIdx);
+        if (charIdx <= 0) {
+            deleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            setTimeout(tick, 200);
+            return;
+        }
+        setTimeout(tick, deleteSpeedMs);
+    };
+
+    tick();
 })();
