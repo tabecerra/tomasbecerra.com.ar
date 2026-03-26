@@ -379,42 +379,45 @@ header {
         filter 0.35s ease;
 }
 
-.project-card--hover-phones:hover,
-.project-card--hover-phones:focus-within {
-    overflow: visible;
-    z-index: 5;
-}
+/* Solo puntero con hover real (no táctil típico de móvil) */
+@media (hover: hover) {
+    .project-card--hover-phones:hover,
+    .project-card--hover-phones:focus-within {
+        overflow: visible;
+        z-index: 5;
+    }
 
-.project-card--hover-phones:hover .project-card__media,
-.project-card--hover-phones:focus-within .project-card__media {
-    overflow: visible;
-}
+    .project-card--hover-phones:hover .project-card__media,
+    .project-card--hover-phones:focus-within .project-card__media {
+        overflow: visible;
+    }
 
-.project-card--hover-phones:hover .project-card__media--gallery > img,
-.project-card--hover-phones:focus-within .project-card__media--gallery > img,
-.project-card--hover-phones:hover .project-card__media--mockup > img,
-.project-card--hover-phones:focus-within .project-card__media--mockup > img {
-    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
-}
+    .project-card--hover-phones:hover .project-card__media--gallery > img,
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img,
+    .project-card--hover-phones:hover .project-card__media--mockup > img,
+    .project-card--hover-phones:focus-within .project-card__media--mockup > img {
+        filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
+    }
 
-.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(1),
-.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(1) {
-    transform: translateY(-18px) scale(1.08);
-}
+    .project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(1),
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(1) {
+        transform: translateY(-18px) scale(1.08);
+    }
 
-.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(2),
-.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(2) {
-    transform: translateY(-26px) scale(1.12);
-}
+    .project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(2),
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(2) {
+        transform: translateY(-26px) scale(1.12);
+    }
 
-.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(3),
-.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(3) {
-    transform: translateY(-18px) scale(1.08);
-}
+    .project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(3),
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(3) {
+        transform: translateY(-18px) scale(1.08);
+    }
 
-.project-card--hover-phones:hover .project-card__media--mockup > img,
-.project-card--hover-phones:focus-within .project-card__media--mockup > img {
-    transform: translateY(-24px) scale(1.1);
+    .project-card--hover-phones:hover .project-card__media--mockup > img,
+    .project-card--hover-phones:focus-within .project-card__media--mockup > img {
+        transform: translateY(-24px) scale(1.1);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
