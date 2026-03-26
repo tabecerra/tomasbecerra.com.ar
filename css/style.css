@@ -125,6 +125,7 @@ header {
     padding-top: 4.5rem;
 }
 
+#experience,
 #about-tech,
 #projects-showcase {
     min-height: auto;
@@ -307,6 +308,7 @@ header {
     line-height: 1.5;
 }
 
+#experience .container,
 #about-tech .container {
     align-items: center;
     padding-top: 5.5rem;
