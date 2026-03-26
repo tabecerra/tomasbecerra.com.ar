@@ -32,6 +32,29 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
         }
     }
+
+    const glassNavLinks = document.querySelectorAll('.glass-nav__item[href^="#"]');
+    const glassSections = ["home", "about", "projects"]
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+    const syncGlassNavActive = () => {
+        const offset = 96;
+        const y = window.scrollY + offset;
+        let activeId = "home";
+        for (const sec of glassSections) {
+            if (sec.offsetTop <= y) activeId = sec.id;
+        }
+        glassNavLinks.forEach((link) => {
+            const href = link.getAttribute("href") || "";
+            link.classList.toggle("is-active", href === `#${activeId}`);
+        });
+    };
+
+    if (glassNavLinks.length > 0 && glassSections.length > 0) {
+        window.addEventListener("scroll", syncGlassNavActive, { passive: true });
+        syncGlassNavActive();
+    }
 });
 
 document.addEventListener("scroll", () => {
