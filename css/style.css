@@ -351,23 +351,28 @@ header {
     object-position: center bottom;
 }
 
-/* Habit tracker: al hover (o foco dentro de la tarjeta) los mockups sobresalen */
-.project-card--hover-phones {
+/* Mockups: mitad inferior del teléfono queda bajo la franja del título */
+.project-card--phone-showcase {
     position: relative;
+    grid-template-rows: 218px auto;
 }
 
-.project-card--hover-phones .project-card__media {
+.project-card--phone-showcase .project-card__media {
     z-index: 1;
+    overflow: visible;
 }
 
-.project-card--hover-phones .project-card__body {
+.project-card--phone-showcase .project-card__body {
+    margin-top: -78px;
     position: relative;
     z-index: 2;
     background: rgba(5, 8, 20, 0.98);
-    box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.65);
+    box-shadow: 0 -12px 32px rgba(0, 0, 0, 0.72);
 }
 
-.project-card--hover-phones .project-card__media--gallery > img {
+/* Hover / foco: mockups sobresalen (Habit: tres; Pescapp: uno) */
+.project-card--hover-phones .project-card__media--gallery > img,
+.project-card--hover-phones .project-card__media--mockup > img {
     transform-origin: bottom center;
     transition:
         transform 0.4s cubic-bezier(0.33, 1.18, 0.48, 1),
@@ -386,7 +391,9 @@ header {
 }
 
 .project-card--hover-phones:hover .project-card__media--gallery > img,
-.project-card--hover-phones:focus-within .project-card__media--gallery > img {
+.project-card--hover-phones:focus-within .project-card__media--gallery > img,
+.project-card--hover-phones:hover .project-card__media--mockup > img,
+.project-card--hover-phones:focus-within .project-card__media--mockup > img {
     filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
 }
 
@@ -405,8 +412,14 @@ header {
     transform: translateY(-18px) scale(1.08);
 }
 
+.project-card--hover-phones:hover .project-card__media--mockup > img,
+.project-card--hover-phones:focus-within .project-card__media--mockup > img {
+    transform: translateY(-24px) scale(1.1);
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .project-card--hover-phones .project-card__media--gallery > img {
+    .project-card--hover-phones .project-card__media--gallery > img,
+    .project-card--hover-phones .project-card__media--mockup > img {
         transition: none;
     }
 
@@ -422,7 +435,9 @@ header {
     }
 
     .project-card--hover-phones:hover .project-card__media--gallery > img,
-    .project-card--hover-phones:focus-within .project-card__media--gallery > img {
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img,
+    .project-card--hover-phones:hover .project-card__media--mockup > img,
+    .project-card--hover-phones:focus-within .project-card__media--mockup > img {
         transform: none;
         filter: none;
     }
