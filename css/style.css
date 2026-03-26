@@ -125,8 +125,51 @@ header {
     padding-top: 4.5rem;
 }
 
-#experience {
+#about-tech,
+#projects {
     min-height: auto;
+}
+
+.page-intro {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 880px);
+    margin: 0 auto;
+    padding: 5.25rem 1.25rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.page-intro__title {
+    margin: 0 0 0.65rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.85rem, 4.2vw, 2.5rem);
+    color: rgba(229, 229, 229, 0.96);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.page-intro__lead {
+    margin: 0;
+    max-width: 40rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(229, 229, 229, 0.78);
+}
+
+.page-intro__lead--sub {
+    max-width: 36rem;
+    margin: 0 auto 1.25rem;
+    text-align: center;
+}
+
+.site-footer-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.25rem 2rem;
+    position: relative;
+    z-index: 3;
 }
 
 .glass-section {
@@ -251,15 +294,15 @@ header {
     line-height: 1.5;
 }
 
-#experience .container,
+#about-tech .container,
 #projects .container {
     align-items: center;
     padding-top: 5.5rem;
     padding-bottom: 2.5rem;
 }
 
-#experience.glass-section--after-intro .container {
-    padding-top: 1.5rem;
+#projects .experience-title {
+    text-align: center;
 }
 
 .tech-grid {
@@ -607,7 +650,9 @@ header {
 .footer-meta {
     margin-top: 0.8rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.65rem;
     font-family: 'Poppins', sans-serif;
     font-size: 0.7rem;
     color: rgba(235, 238, 245, 0.55);
