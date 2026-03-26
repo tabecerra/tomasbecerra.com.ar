@@ -11,14 +11,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
-	<link rel="icon" href="data:,">
 </head>
 <body class="primary-background">
 	<header>
 		<nav class="glass-nav reveal" style="--d: 120ms;" aria-label="Navegación principal">
-			<a class="glass-nav__item is-active" href="#home">Home</a>
-			<a class="glass-nav__item" href="#about">About</a>
-			<a class="glass-nav__item" href="#projects">Projects</a>
+			<a class="glass-nav__item is-active" href="./#home">Home</a>
+			<a class="glass-nav__item" href="./about/" target="_blank" rel="noopener noreferrer">About</a>
+			<a class="glass-nav__item" href="./projects/" target="_blank" rel="noopener noreferrer">Projects</a>
 			<a class="glass-nav__item" href="mailto:devtomasbecerra@gmail.com">Contact</a>
 		</nav>
 	</header>
@@ -54,247 +53,39 @@
 			
 		</div>
 	</section>
-	<section id="about" class="glass-section">
-		<div class="container">
-			<header class="about-intro reveal" style="--d: 120ms;">
-				<h2 class="about-intro__title">Hi, I&apos;m Tomás Becerra</h2>
-				<p class="about-intro__text">
-					Full stack developer based in Buenos Aires. I ship web and mobile apps, APIs and automations—balancing solid backends with interfaces people enjoy using.
-				</p>
-			</header>
 
-			<h2 class="experience-title reveal" style="--d: 140ms;">Experience</h2>
-
-			<div class="experience-card reveal" style="--d: 220ms;">
-				<div class="experience-timeline" aria-label="Experience and education">
-					<div class="experience-item">
-						<div class="experience-rail" aria-hidden="true">
-							<span class="experience-dot">
-								<img src="./src/calim.png" alt="Calim">
-							</span>
-						</div>
-						<div class="experience-content">
-							<p class="experience-period">Dec 2023 — Present</p>
-							<h3 class="experience-place">Calim - Digital Accounting Studio</h3>
-							<p class="experience-desc">Full Stack Developer — built customer, invoicing and reporting modules; automated recurring accounting workflows; improved SQL performance and stability.</p>
-						</div>
+	<footer class="site-footer">
+		<div class="footer-shell">
+			<div class="footer-main">
+				<div class="footer-brand">
+					<p class="footer-name">Tomás<br>Becerra.</p>
+				</div>
+				<div class="footer-columns">
+					<div class="footer-column">
+						<h3 class="footer-heading">Explore</h3>
+						<ul>
+							<li><a href="./#home">Home</a></li>
+							<li><a href="./about/" target="_blank" rel="noopener noreferrer">About</a></li>
+							<li><a href="./projects/" target="_blank" rel="noopener noreferrer">Projects</a></li>
+						</ul>
 					</div>
-
-					<div class="experience-item">
-						<div class="experience-rail" aria-hidden="true">
-							<span class="experience-dot">
-								<img src="./src/undav.png" alt="Universidad Nacional de Avellaneda">
-							</span>
-						</div>
-						<div class="experience-content">
-							<p class="experience-period">Jul 2025 — Present</p>
-							<h3 class="experience-place">National University of Avellaneda</h3>
-							<p class="experience-desc">Computer Engineering (in progress).</p>
-						</div>
+					<div class="footer-column">
+						<h3 class="footer-heading">Let&apos;s Connect</h3>
+						<ul>
+							<li><a href="mailto:devtomasbecerra@gmail.com">Email</a></li>
+							<li><a href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+							<li><a href="https://github.com/tabecerra" target="_blank" rel="noreferrer">GitHub</a></li>
+						</ul>
 					</div>
-
-					<div class="experience-item">
-						<div class="experience-rail" aria-hidden="true">
-							<span class="experience-dot">
-								<img src="./src/huergo.png" alt="Instituto Industrial Luis A. Huergo">
-							</span>
-						</div>
-						<div class="experience-content">
-							<p class="experience-period">Jan 2018 — Dec 2023</p>
-							<h3 class="experience-place">Luis A. Huergo Industrial Institute</h3>
-							<p class="experience-desc">Computer Technician (degree).</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<h2 class="experience-title reveal" style="--d: 300ms;">Tech Stack</h2>
-
-			<div class="tech-grid reveal" style="--d: 380ms;" aria-label="Tech stack">
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/java.svg" alt="Java" loading="lazy" decoding="async">
-					<span>Java</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/html5.svg" alt="HTML" loading="lazy" decoding="async">
-					<span>HTML</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/css3.svg" alt="CSS" loading="lazy" decoding="async">
-					<span>CSS</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/javascript.svg" alt="JavaScript" loading="lazy" decoding="async">
-					<span>JavaScript</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/typescript.png" alt="TypeScript" loading="lazy" decoding="async">
-					<span>TypeScript</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/python.svg" alt="Python" loading="lazy" decoding="async">
-					<span>Python</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/react.svg" alt="React" loading="lazy" decoding="async">
-					<span>React</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/svg/angular.svg" alt="Angular" loading="lazy" decoding="async">
-					<span>Angular</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/nodejs.png" alt="Node.js" loading="lazy" decoding="async">
-					<span>Node.js</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/ionic.png" alt="Ionic" loading="lazy" decoding="async">
-					<span>Ionic</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/vercel.png" alt="Vercel" loading="lazy" decoding="async">
-					<span>Vercel</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/sass.png" alt="Sass" loading="lazy" decoding="async">
-					<span>Sass</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/git.png" alt="Git" loading="lazy" decoding="async">
-					<span>Git</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/springboot.png" alt="Spring Boot" loading="lazy" decoding="async">
-					<span>Spring Boot</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/hibernate.png" alt="Hibernate" loading="lazy" decoding="async">
-					<span>Hibernate</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/mysql.png" alt="MySQL" loading="lazy" decoding="async">
-					<span>MySQL</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/postgresql.png" alt="PostgreSQL" loading="lazy" decoding="async">
-					<span>PostgreSQL</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/sqlite.png" alt="SQLite" loading="lazy" decoding="async">
-					<span>SQLite</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/n8n.png" alt="n8n" loading="lazy" decoding="async">
-					<span>n8n</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/docker.png" alt="Docker" loading="lazy" decoding="async">
-					<span>Docker</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/c++.png" alt="C++" loading="lazy" decoding="async">
-					<span>C++</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/tailwind.png" alt="Tailwind" loading="lazy" decoding="async">
-					<span>Tailwind</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/postman.png" alt="Postman" loading="lazy" decoding="async">
-					<span>Postman</span>
-				</div>
-				<div class="tech-pill">
-					<img class="tech-icon" src="./src/jquery.svg" alt="jQuery" loading="lazy" decoding="async">
-					<span>jQuery</span>
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<section id="projects" class="glass-section">
-		<div class="container">
-			<h2 class="experience-title reveal" style="--d: 140ms;">Projects</h2>
-
-			<div class="projects-grid reveal" style="--d: 220ms;" aria-label="Projects">
-				<article class="project-card project-card--phone-showcase project-card--hover-phones">
-					<div class="project-card__media project-card__media--gallery" aria-label="Habit tracker: capturas de la app">
-						<img src="./src/mockup-habit-home.png" alt="Habit tracker: pantalla de hábitos del día" loading="lazy" decoding="async">
-						<img src="./src/mockup-habit-add.png" alt="Habit tracker: alta de nuevo hábito" loading="lazy" decoding="async">
-						<img src="./src/mockup-habit-history.png" alt="Habit tracker: historial y rachas" loading="lazy" decoding="async">
-					</div>
-					<div class="project-card__body">
-						<div class="project-card__header">
-							<h3 class="project-card__title">Habit tracker</h3>
-							<a class="project-card__cta" href="https://github.com/tabecerra" target="_blank" rel="noreferrer"><span>Discover</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-						</div>
-						<p class="project-card__desc">
-							Mobile app to log daily habits, mark them done and review history with streaks and weekly progress.
-						</p>
-						<ul class="project-card__tags" aria-label="Technologies used">
-							<li>React Native</li>
-							<li>Expo</li>
-							<li>TypeScript</li>
-							<li>SQLite</li>
-						</ul>
-					</div>
-				</article>
-
-				<article class="project-card project-card--phone-showcase project-card--hover-phones">
-					<div class="project-card__media project-card__media--mockup">
-						<img src="./src/mockup-pescapp.png" alt="Pescapp: mockup de la app móvil" loading="lazy" decoding="async">
-					</div>
-					<div class="project-card__body">
-						<div class="project-card__header">
-							<h3 class="project-card__title">Pescapp</h3>
-							<a class="project-card__cta" href="https://github.com/tabecerra/pescapp" target="_blank" rel="noreferrer"><span>Discover</span><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-						</div>
-						<p class="project-card__desc">
-							AI‑assisted fishing companion that suggests gear and best time windows based on live weather.
-						</p>
-						<ul class="project-card__tags" aria-label="Technologies used">
-							<li>React Native</li>
-							<li>Expo</li>
-							<li>Node.js</li>
-							<li>OpenAI API</li>
-						</ul>
-					</div>
-				</article>
-			</div>
-
-			<footer class="site-footer">
-				<div class="footer-shell">
-					<div class="footer-main">
-						<div class="footer-brand">
-							<p class="footer-name">Tomás<br>Becerra.</p>
-						</div>
-						<div class="footer-columns">
-							<div class="footer-column">
-								<h3 class="footer-heading">Explore</h3>
-								<ul>
-									<li><a href="#home">Home</a></li>
-									<li><a href="#about">About</a></li>
-									<li><a href="#projects">Projects</a></li>
-									<li><a href="mailto:devtomasbecerra@gmail.com">Contact</a></li>
-								</ul>
-							</div>
-							<div class="footer-column">
-								<h3 class="footer-heading">Let&apos;s Connect</h3>
-								<ul>
-									<li><a href="mailto:devtomasbecerra@gmail.com">Email</a></li>
-									<li><a href="https://www.linkedin.com/in/tom%C3%A1s-becerra-2227ba2aa/" target="_blank" rel="noreferrer">LinkedIn</a></li>
-									<li><a href="https://github.com/tabecerra" target="_blank" rel="noreferrer">GitHub</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-meta">
-					<span>© 2026</span>
-					<span>Tomás Becerra.</span>
-				</div>
-			</footer>
+		<div class="footer-meta">
+			<span>© 2026</span>
+			<span>Tomás Becerra.</span>
 		</div>
-	</section>
+	</footer>
+	</div>
 	<script src="./js/script.js"></script>
 </body>
 </html>
