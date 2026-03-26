@@ -333,14 +333,20 @@ header {
     object-fit: cover;
 }
 
+/* Mockups móvil: mismo tratamiento que Habit (fondo + teléfono completo) */
+.project-card__media--gallery,
+.project-card__media--mockup {
+    background: #0d1117;
+}
+
 .project-card__media--gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
-    background: #0d1117;
 }
 
-.project-card__media--gallery > img {
+.project-card__media--gallery > img,
+.project-card__media--mockup > img {
     object-fit: contain;
     object-position: center bottom;
 }
