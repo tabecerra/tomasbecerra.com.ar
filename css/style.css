@@ -333,12 +333,14 @@ header {
     object-fit: cover;
 }
 
-/* Mockups verticales: evita recortar el marco del teléfono */
-.project-card__media--habit-mockup {
+.project-card__media--gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
     background: #0d1117;
 }
 
-.project-card__media--habit-mockup > img {
+.project-card__media--gallery > img {
     object-fit: contain;
     object-position: center bottom;
 }
