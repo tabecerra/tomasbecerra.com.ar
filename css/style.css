@@ -345,6 +345,71 @@ header {
     object-position: center bottom;
 }
 
+/* Habit tracker: al hover (o foco dentro de la tarjeta) los mockups sobresalen */
+.project-card--hover-phones {
+    position: relative;
+}
+
+.project-card--hover-phones .project-card__media--gallery > img {
+    transition:
+        transform 0.4s cubic-bezier(0.33, 1.18, 0.48, 1),
+        filter 0.35s ease;
+}
+
+.project-card--hover-phones:hover,
+.project-card--hover-phones:focus-within {
+    overflow: visible;
+    z-index: 5;
+}
+
+.project-card--hover-phones:hover .project-card__media,
+.project-card--hover-phones:focus-within .project-card__media {
+    overflow: visible;
+}
+
+.project-card--hover-phones:hover .project-card__media--gallery > img,
+.project-card--hover-phones:focus-within .project-card__media--gallery > img {
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
+}
+
+.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(1),
+.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(1) {
+    transform: translateY(-18px) scale(1.08);
+}
+
+.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(2),
+.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(2) {
+    transform: translateY(-26px) scale(1.12);
+}
+
+.project-card--hover-phones:hover .project-card__media--gallery > img:nth-child(3),
+.project-card--hover-phones:focus-within .project-card__media--gallery > img:nth-child(3) {
+    transform: translateY(-18px) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card--hover-phones .project-card__media--gallery > img {
+        transition: none;
+    }
+
+    .project-card--hover-phones:hover,
+    .project-card--hover-phones:focus-within {
+        overflow: hidden;
+        z-index: auto;
+    }
+
+    .project-card--hover-phones:hover .project-card__media,
+    .project-card--hover-phones:focus-within .project-card__media {
+        overflow: hidden;
+    }
+
+    .project-card--hover-phones:hover .project-card__media--gallery > img,
+    .project-card--hover-phones:focus-within .project-card__media--gallery > img {
+        transform: none;
+        filter: none;
+    }
+}
+
 .project-card__body {
     padding: 0.6rem 0.95rem 1.05rem;
     background: rgba(0, 0, 0, 0.78);
