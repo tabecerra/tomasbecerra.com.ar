@@ -315,6 +315,11 @@ header {
     padding-bottom: 2.5rem;
 }
 
+/* Mismo aire que entre la card de Experience y el título Tech stack (margin-bottom 4rem de la card) */
+#experience .container > .experience-title:first-of-type {
+    margin-top: 4rem;
+}
+
 #projects-showcase .container {
     align-items: center;
     padding-top: 2rem;
