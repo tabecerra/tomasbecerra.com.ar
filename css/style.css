@@ -350,7 +350,19 @@ header {
     position: relative;
 }
 
+.project-card--hover-phones .project-card__media {
+    z-index: 1;
+}
+
+.project-card--hover-phones .project-card__body {
+    position: relative;
+    z-index: 2;
+    background: rgba(5, 8, 20, 0.98);
+    box-shadow: 0 -10px 28px rgba(0, 0, 0, 0.65);
+}
+
 .project-card--hover-phones .project-card__media--gallery > img {
+    transform-origin: bottom center;
     transition:
         transform 0.4s cubic-bezier(0.33, 1.18, 0.48, 1),
         filter 0.35s ease;
